@@ -1,0 +1,15 @@
+{
+  "name": "careersetu-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CareerSetu local prototype server and static app.",
+  "scripts": {
+    "start": "node --use-system-ca prototype/server.js",
+    "dev": "node --use-system-ca prototype/server.js",
+    "check": "node --check prototype/server.js && node --check prototype/app.js",
+    "embeddings": "node scripts/generate_job_embeddings.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

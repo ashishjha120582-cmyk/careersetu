@@ -1,0 +1,66 @@
+[
+  {
+    "skill": "basic-computer",
+    "title": "Computer Basics for Beginners",
+    "provider": "YouTube / SWAYAM search",
+    "language": "Hindi / English",
+    "type": "video course",
+    "practice": "Create a folder, write a document, send an email, and search for job information online."
+  },
+  {
+    "skill": "excel",
+    "title": "Excel Basics: sorting, filtering, formulas",
+    "provider": "YouTube / NPTEL / SWAYAM search",
+    "language": "Hindi / English",
+    "type": "playlist",
+    "practice": "Create a monthly expense sheet with totals, sorting, and filters."
+  },
+  {
+    "skill": "typing",
+    "title": "Typing Speed Practice",
+    "provider": "Free typing practice websites",
+    "language": "Any",
+    "type": "practice",
+    "practice": "Practice 20 minutes daily and aim for 30+ WPM with accuracy."
+  },
+  {
+    "skill": "communication",
+    "title": "Workplace Communication Basics",
+    "provider": "YouTube / spoken English-Hindi guides",
+    "language": "Hindi / English / regional",
+    "type": "video playlist",
+    "practice": "Record a 60-second self introduction and a customer conversation script."
+  },
+  {
+    "skill": "customer-service",
+    "title": "Customer Handling and Support Basics",
+    "provider": "YouTube / free BPO training content",
+    "language": "Hindi / English",
+    "type": "guide",
+    "practice": "Practice greeting, listening, repeating the issue, and closing a customer call."
+  },
+  {
+    "skill": "sales",
+    "title": "Beginner Sales Conversation",
+    "provider": "YouTube / sales training channels",
+    "language": "Hindi / English",
+    "type": "video guide",
+    "practice": "Prepare a 4-line product pitch and practice objection handling."
+  },
+  {
+    "skill": "basic-math",
+    "title": "Billing and Basic Calculation Practice",
+    "provider": "Free arithmetic videos",
+    "language": "Hindi / English",
+    "type": "practice",
+    "practice": "Practice percentage, discount, cash calculation, and simple billing."
+  },
+  {
+    "skill": "electrical-basics",
+    "title": "Electrical Basics and Safety",
+    "provider": "Skill India / YouTube trade basics",
+    "language": "Hindi / English",
+    "type": "video course",
+    "practice": "Learn wire types, safety rules, and basic tool names before applying for helper/apprentice roles."
+  }
+]

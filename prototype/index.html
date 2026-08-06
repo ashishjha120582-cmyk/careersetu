@@ -1,0 +1,238 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CareerSetu Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="intro-mode">
+    <main class="app-shell">
+      <nav class="topbar" aria-label="Application header">
+        <a class="brand" href="#"><span>Career</span>Setu</a>
+        <div class="nav-links" aria-label="Sections">
+          <button class="nav-tab active" type="button" data-tab="discover">Discover</button>
+          <button class="nav-tab" type="button" data-tab="saved">Saved</button>
+          <button class="nav-tab" type="button" data-tab="applied">Applied</button>
+        </div>
+        <div class="top-actions">
+          <div class="status-pill">Guided search</div>
+          <div id="datasetStats" class="dataset-stats"></div>
+        </div>
+      </nav>
+
+      <section id="search" class="search-hero" aria-label="Career chat">
+        <div class="hero-copy">
+          <p class="eyebrow">Career discovery</p>
+          <h1 class="animated-heading">
+            <span class="heading-fixed">Find</span>
+            <span class="heading-rotator" aria-hidden="true">
+              <span>best naukri</span>
+              <span>near you</span>
+              <span>with your skills</span>
+            </span>
+            <span class="sr-only">Find best naukri near you with your skills</span>
+          </h1>
+          <p>Search jobs, understand your fit, and get a practical learning path before you apply.</p>
+        </div>
+        <div class="chat-row">
+          <textarea id="chatInput" rows="3" aria-label="Describe your profile">I am from West Bengal, 12th pass, know computer, what jobs can I do?</textarea>
+          <button id="voiceBtn" class="voice-button" type="button" aria-label="Speak your search" title="Speak your search">
+            <svg class="mic-icon icon-mic" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 11a7 7 0 0 1-14 0"></path>
+              <path d="M12 18v3"></path>
+              <path d="M8 21h8"></path>
+            </svg>
+            <svg class="mic-icon icon-stop" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M8 8h8v8H8z"></path>
+            </svg>
+          </button>
+          <button id="chatBtn" type="button" aria-label="Find matching jobs">Find</button>
+          <span id="voiceStatus" class="voice-status" aria-live="polite"></span>
+        </div>
+        <div class="example-row" aria-label="Example searches">
+          <span>Try:</span>
+          <button type="button">12th pass, Rajasthan, computer</button>
+          <button type="button">ITI electrician apprentice</button>
+          <button type="button">I like talking to customers</button>
+        </div>
+        <div class="profile-capture">
+          <label class="resume-drop">
+            <span>Attach resume or paste skills</span>
+            <input id="resumeInput" type="file" accept=".txt,.pdf,.doc,.docx" />
+          </label>
+          <input id="skillsTextInput" type="text" placeholder="Add skills: Excel, typing, customer handling..." />
+        </div>
+      </section>
+
+      <section class="model-panel" aria-label="Search understanding">
+        <div>
+          <h2>Your profile summary</h2>
+          <p>Update your message anytime. The results will adjust around your location, education, and skills.</p>
+        </div>
+        <div id="modelInsights" class="insight-grid"></div>
+      </section>
+
+      <section id="loadingOverlay" class="loading-overlay" aria-live="polite">
+        <div class="loader-card">
+          <div class="loader-dots"><span></span><span></span><span></span></div>
+          <strong id="loadingTitle">Finding suitable jobs</strong>
+          <p id="loadingText">Reading your profile and ranking real opportunities.</p>
+        </div>
+      </section>
+
+      <section class="workspace app-view active chat-only-workspace" data-view="discover">
+        <aside class="profile-panel" aria-label="User profile">
+          <div class="panel-header">
+            <h2>Extracted profile</h2>
+            <p>Chat fills this, and users can still adjust it.</p>
+          </div>
+
+          <label>
+            Education
+            <select id="education">
+              <option value="12th pass">12th pass</option>
+              <option value="10th pass">10th pass</option>
+              <option value="ITI">ITI</option>
+              <option value="graduate">Graduate</option>
+            </select>
+          </label>
+
+          <label>
+            State
+            <select id="state">
+              <option>Andhra Pradesh</option>
+              <option>Arunachal Pradesh</option>
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Chhattisgarh</option>
+              <option>Goa</option>
+              <option>Gujarat</option>
+              <option>Haryana</option>
+              <option>Himachal Pradesh</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+              <option>Kerala</option>
+              <option>Madhya Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Odisha</option>
+              <option>Punjab</option>
+              <option>Rajasthan</option>
+              <option>Tamil Nadu</option>
+              <option>Telangana</option>
+              <option>Uttar Pradesh</option>
+              <option>Uttarakhand</option>
+              <option>West Bengal</option>
+              <option>Delhi NCR</option>
+            </select>
+          </label>
+
+          <label>
+            Preferred path
+            <select id="preference">
+              <option value="any">Any suitable path</option>
+              <option value="private_job">Private job</option>
+              <option value="govt_exam">Government exam</option>
+              <option value="apprenticeship">Apprenticeship</option>
+              <option value="self_employment">Self-employment</option>
+            </select>
+          </label>
+
+          <label>
+            Category
+            <select id="category">
+              <option value="any">Any category</option>
+              <option value="office_computer">Office/computer</option>
+              <option value="sales_service">Sales/service</option>
+              <option value="logistics">Logistics</option>
+              <option value="govt_exam">Government exam</option>
+              <option value="technical_trade">Technical trade</option>
+              <option value="financial_services">Financial services</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>Current skills</legend>
+            <label class="check"><input type="checkbox" value="typing" checked /> Typing</label>
+            <label class="check"><input type="checkbox" value="basic-computer" checked /> Basic computer</label>
+            <label class="check"><input type="checkbox" value="excel" /> Excel</label>
+            <label class="check"><input type="checkbox" value="communication" /> Communication</label>
+            <label class="check"><input type="checkbox" value="electrical-basics" /> Electrical basics</label>
+            <label class="check"><input type="checkbox" value="customer-service" /> Customer service</label>
+            <label class="check"><input type="checkbox" value="quantitative-aptitude" /> Quant aptitude</label>
+          </fieldset>
+
+        </aside>
+
+        <section id="results" class="results-panel" aria-label="Recommendations">
+          <div class="results-header">
+            <div>
+              <h2>Matched opportunities</h2>
+              <p id="matchSummary">Showing roles that fit your location, education, and skills. Flexible roles stay visible when training is possible.</p>
+            </div>
+            <button id="refreshBtn" type="button">Update</button>
+          </div>
+
+          <div id="recommendations" class="recommendations"></div>
+        </section>
+
+        <section id="details" class="detail-panel" aria-label="Career details">
+          <div id="careerDetail" class="career-detail"></div>
+        </section>
+      </section>
+
+      <section class="collection-view app-view" data-view="saved">
+        <div class="collection-header">
+          <h2>Saved jobs</h2>
+          <p>Jobs you want to revisit and compare.</p>
+        </div>
+        <div id="savedJobsPanel" class="collection-grid"></div>
+      </section>
+
+      <section class="collection-view app-view" data-view="applied">
+        <div class="collection-header">
+          <h2>Applied jobs</h2>
+          <p>Track jobs you have already applied to.</p>
+        </div>
+        <div id="appliedJobsPanel" class="collection-grid"></div>
+      </section>
+
+      <dialog id="skillGuideDialog" class="skill-dialog">
+        <div class="dialog-shell">
+          <div class="dialog-header">
+            <div>
+              <h2>Skill guide</h2>
+              <p id="dialogSubtitle">Understand your gap and next steps.</p>
+            </div>
+            <button id="closeSkillDialog" class="icon-button" type="button" aria-label="Close">x</button>
+          </div>
+          <div class="voice-guide-box">
+            <button id="skillGuideVoiceBtn" class="guide-voice-button" type="button" aria-label="Speak what you know" title="Speak what you know">
+              <svg class="mic-icon icon-mic" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 11a7 7 0 0 1-14 0"></path>
+                <path d="M12 18v3"></path>
+                <path d="M8 21h8"></path>
+              </svg>
+              <svg class="mic-icon icon-stop" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M8 8h8v8H8z"></path>
+              </svg>
+            </button>
+            <div>
+              <strong>Speak what you already know</strong>
+              <p id="skillGuideVoiceStatus">Use your own language. Recording stops after 5 seconds.</p>
+              <span id="skillGuideTranscript" class="guide-transcript"></span>
+            </div>
+            <textarea id="skillGuideInput" class="sr-only" rows="1" tabindex="-1" aria-hidden="true"></textarea>
+            <button id="generateSkillGuideBtn" class="sr-only" type="button" tabindex="-1" aria-hidden="true">Create guide</button>
+          </div>
+          <div id="skillGuideResult" class="skill-guide-result"></div>
+        </div>
+      </dialog>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+

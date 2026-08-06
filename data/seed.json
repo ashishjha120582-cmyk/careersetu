@@ -1,0 +1,210 @@
+{
+  "occupations": [
+    {
+      "id": "data-entry-operator",
+      "title": "Data Entry Operator",
+      "category": "Office and Digital Work",
+      "description": "Enters, checks, and updates information in computer systems for offices, hospitals, shops, logistics companies, and government service centers.",
+      "minimumEducation": "12th pass",
+      "salaryRange": "Rs 10,000 - Rs 22,000 per month",
+      "requiredSkills": ["typing", "basic-computer", "excel", "attention-detail"],
+      "dailyTasks": [
+        "Enter customer or business records",
+        "Check forms and correct errors",
+        "Maintain spreadsheets",
+        "Upload documents or reports"
+      ],
+      "growthPath": ["MIS Executive", "Office Coordinator", "Operations Assistant"],
+      "fit": ["12th pass", "beginner", "local private jobs"]
+    },
+    {
+      "id": "ssc-chsl",
+      "title": "SSC CHSL Candidate",
+      "category": "Government Exam",
+      "description": "Prepares for 12th-level central government posts such as Lower Division Clerk, Junior Secretariat Assistant, Postal Assistant, and Data Entry Operator.",
+      "minimumEducation": "12th pass",
+      "salaryRange": "Government pay level varies by post",
+      "requiredSkills": ["quantitative-aptitude", "english-basics", "reasoning", "general-awareness", "typing"],
+      "dailyTasks": [
+        "Prepare clerical files and records",
+        "Handle office documentation",
+        "Use basic computer systems",
+        "Support department-level administration"
+      ],
+      "growthPath": ["Senior Assistant", "Section Assistant", "Department Officer"],
+      "fit": ["12th pass", "government job", "exam preparation"]
+    },
+    {
+      "id": "electrician-apprentice",
+      "title": "Electrician Apprentice",
+      "category": "Skilled Trade",
+      "description": "Learns to install, repair, and maintain electrical wiring, appliances, panels, and safety systems under supervision.",
+      "minimumEducation": "10th pass or ITI preferred",
+      "salaryRange": "Rs 8,000 - Rs 18,000 stipend/salary during early stage",
+      "requiredSkills": ["electrical-basics", "safety", "tools", "measurement"],
+      "dailyTasks": [
+        "Assist with wiring and electrical repairs",
+        "Use meters and hand tools",
+        "Follow safety procedures",
+        "Support senior technicians at sites"
+      ],
+      "growthPath": ["Electrician", "Maintenance Technician", "Electrical Supervisor"],
+      "fit": ["10th pass", "ITI", "hands-on work", "apprenticeship"]
+    },
+    {
+      "id": "solar-technician",
+      "title": "Solar Technician",
+      "category": "Green Jobs",
+      "description": "Installs and maintains solar panels, batteries, inverters, and related electrical systems for homes, farms, and businesses.",
+      "minimumEducation": "10th/12th pass, ITI helpful",
+      "salaryRange": "Rs 12,000 - Rs 28,000 per month",
+      "requiredSkills": ["electrical-basics", "solar-basics", "safety", "tools"],
+      "dailyTasks": [
+        "Install solar panels and support structures",
+        "Connect wiring, batteries, and inverters",
+        "Inspect system performance",
+        "Perform basic maintenance"
+      ],
+      "growthPath": ["Solar Installer", "Solar Site Supervisor", "Renewable Energy Entrepreneur"],
+      "fit": ["green jobs", "hands-on work", "rural entrepreneurship"]
+    },
+    {
+      "id": "banking-correspondent",
+      "title": "Banking Correspondent",
+      "category": "Financial Services",
+      "description": "Provides basic banking services in villages and small towns, including account support, deposits, withdrawals, and digital payments.",
+      "minimumEducation": "10th or 12th pass",
+      "salaryRange": "Commission-based plus incentives",
+      "requiredSkills": ["basic-computer", "customer-service", "digital-payments", "communication"],
+      "dailyTasks": [
+        "Help customers with banking transactions",
+        "Use biometric or digital payment devices",
+        "Explain banking services",
+        "Maintain transaction records"
+      ],
+      "growthPath": ["CSP Operator", "Microfinance Officer", "Rural Banking Agent"],
+      "fit": ["rural", "self-employment", "public service"]
+    }
+  ],
+  "skills": [
+    { "id": "typing", "name": "Typing", "category": "digital", "difficulty": "beginner" },
+    { "id": "basic-computer", "name": "Basic Computer Use", "category": "digital", "difficulty": "beginner" },
+    { "id": "excel", "name": "Excel or Spreadsheet Basics", "category": "digital", "difficulty": "beginner" },
+    { "id": "attention-detail", "name": "Attention to Detail", "category": "soft", "difficulty": "beginner" },
+    { "id": "quantitative-aptitude", "name": "Quantitative Aptitude", "category": "exam", "difficulty": "intermediate" },
+    { "id": "english-basics", "name": "English Basics", "category": "exam", "difficulty": "beginner" },
+    { "id": "reasoning", "name": "Reasoning", "category": "exam", "difficulty": "intermediate" },
+    { "id": "general-awareness", "name": "General Awareness", "category": "exam", "difficulty": "intermediate" },
+    { "id": "electrical-basics", "name": "Electrical Basics", "category": "trade", "difficulty": "beginner" },
+    { "id": "safety", "name": "Workplace Safety", "category": "trade", "difficulty": "beginner" },
+    { "id": "tools", "name": "Hand Tool Use", "category": "trade", "difficulty": "beginner" },
+    { "id": "measurement", "name": "Electrical Measurement", "category": "trade", "difficulty": "intermediate" },
+    { "id": "solar-basics", "name": "Solar PV Basics", "category": "green", "difficulty": "beginner" },
+    { "id": "customer-service", "name": "Customer Service", "category": "soft", "difficulty": "beginner" },
+    { "id": "digital-payments", "name": "Digital Payments", "category": "financial", "difficulty": "beginner" },
+    { "id": "communication", "name": "Communication", "category": "soft", "difficulty": "beginner" }
+  ],
+  "resources": [
+    {
+      "id": "typing-practice",
+      "title": "Typing Practice - Beginner",
+      "provider": "Curated Web",
+      "type": "practice",
+      "language": "English/Hindi",
+      "cost": "free",
+      "skillsTaught": ["typing"]
+    },
+    {
+      "id": "basic-computer-course",
+      "title": "Computer Basics for Beginners",
+      "provider": "YouTube/SWAYAM seed",
+      "type": "course",
+      "language": "Hindi",
+      "cost": "free",
+      "skillsTaught": ["basic-computer", "excel"]
+    },
+    {
+      "id": "ssc-foundation",
+      "title": "SSC CHSL Foundation Roadmap",
+      "provider": "Curated YouTube seed",
+      "type": "playlist",
+      "language": "Hindi",
+      "cost": "free",
+      "skillsTaught": ["quantitative-aptitude", "reasoning", "english-basics", "general-awareness"]
+    },
+    {
+      "id": "electrical-safety",
+      "title": "Electrical Safety and Tools Basics",
+      "provider": "Skill training seed",
+      "type": "course",
+      "language": "Hindi",
+      "cost": "free",
+      "skillsTaught": ["electrical-basics", "safety", "tools"]
+    },
+    {
+      "id": "solar-intro",
+      "title": "Solar PV Technician Introduction",
+      "provider": "NPTEL/Sector skill seed",
+      "type": "course",
+      "language": "Hindi/English",
+      "cost": "free",
+      "skillsTaught": ["solar-basics", "electrical-basics", "safety"]
+    },
+    {
+      "id": "digital-banking",
+      "title": "Digital Banking and Customer Service Basics",
+      "provider": "Curated Web",
+      "type": "course",
+      "language": "Hindi",
+      "cost": "free",
+      "skillsTaught": ["digital-payments", "customer-service", "communication"]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "opp-data-entry-local",
+      "title": "Local Data Entry and Office Assistant Roles",
+      "type": "private_job",
+      "organization": "Local offices, hospitals, logistics firms",
+      "location": "District-level",
+      "eligibility": "12th pass with typing and computer basics",
+      "relatedOccupationId": "data-entry-operator"
+    },
+    {
+      "id": "opp-ssc-chsl",
+      "title": "SSC CHSL Exam Track",
+      "type": "govt_exam",
+      "organization": "Staff Selection Commission",
+      "location": "All India",
+      "eligibility": "12th pass; age and category rules as per official notification",
+      "relatedOccupationId": "ssc-chsl"
+    },
+    {
+      "id": "opp-electrician-naps",
+      "title": "Electrician Apprenticeship Track",
+      "type": "apprenticeship",
+      "organization": "NAPS/NATS and local employers",
+      "location": "State/district dependent",
+      "eligibility": "10th pass or ITI preferred",
+      "relatedOccupationId": "electrician-apprentice"
+    },
+    {
+      "id": "opp-solar-local",
+      "title": "Solar Installation and Maintenance Roles",
+      "type": "private_job",
+      "organization": "Solar EPC firms and local installers",
+      "location": "High demand in solar-growth districts",
+      "eligibility": "Electrical basics and safety training",
+      "relatedOccupationId": "solar-technician"
+    },
+    {
+      "id": "opp-banking-correspondent",
+      "title": "Banking Correspondent / CSP Operator",
+      "type": "self_employment",
+      "organization": "Banks, CSP networks, fintech partners",
+      "location": "Village and small-town markets",
+      "eligibility": "Basic digital skills, customer handling, local trust",
+      "relatedOccupationId": "banking-correspondent"
+    }
+  ]
+}

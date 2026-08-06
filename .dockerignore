@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+
+.git
+.github
+node_modules
+server.out.log
+server.err.log
+scripts/__pycache__
+*.pyc
+

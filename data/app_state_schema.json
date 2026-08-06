@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "user_demo",
+      "education_level": "12th pass",
+      "state": "West Bengal",
+      "district": "",
+      "skills": ["typing", "basic-computer"],
+      "languages": ["Hindi", "English"],
+      "career_preference": "any"
+    }
+  ],
+  "saved_jobs": [
+    {
+      "id": "saved_demo",
+      "user_id": "user_demo",
+      "opportunity_id": "opp_id",
+      "saved_at": "2026-07-04T00:00:00Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "application_demo",
+      "user_id": "user_demo",
+      "opportunity_id": "opp_id",
+      "apply_type": "external",
+      "source_url": "https://example.com/apply",
+      "status": "viewed",
+      "submitted_at": "",
+      "updated_at": "2026-07-04T00:00:00Z",
+      "checklist": {
+        "resume_ready": false,
+        "id_proof_ready": false,
+        "education_proof_ready": false,
+        "phone_email_ready": true,
+        "skills_practiced": false
+      }
+    }
+  ],
+  "skill_gap_reports": [
+    {
+      "id": "skill_gap_demo",
+      "user_id": "user_demo",
+      "opportunity_id": "opp_id",
+      "known_skills": ["basic-computer"],
+      "matched_skills": ["basic-computer"],
+      "missing_must_have": [],
+      "missing_good_to_have": ["excel", "communication"],
+      "readiness": "Can try now",
+      "created_at": "2026-07-04T00:00:00Z"
+    }
+  ],
+  "roadmap_cache": [
+    {
+      "cache_key": "opp_id__basic-computer_excel__12th-pass",
+      "opportunity_id": "opp_id",
+      "user_skills": ["basic-computer", "excel"],
+      "education_level": "12th pass",
+      "roadmap": [
+        {
+          "title": "Understand the role",
+          "description": "Read the job and daily work clearly."
+        }
+      ],
+      "model_used": "local_heuristic_v1",
+      "created_at": "2026-07-04T00:00:00Z"
+    }
+  ]
+}
