@@ -681,7 +681,7 @@ async function handleApi(req, res, urlPath) {
   return false;
 }
 
-const server = http.createServer(async (req, res) => {
+async function requestHandler(req, res) {
   const urlPath = decodeURIComponent(req.url.split("?")[0]);
   if (urlPath.startsWith("/api/") && (await handleApi(req, res, urlPath))) return;
 
@@ -708,8 +708,14 @@ const server = http.createServer(async (req, res) => {
     });
     res.end(content);
   });
-});
+}
 
-server.listen(port, host, () => {
-  console.log(`CareerSetu prototype running at http://${host}:${port}`);
-});
+const server = http.createServer(requestHandler);
+
+if (require.main === module) {
+  server.listen(port, host, () => {
+    console.log(`CareerSetu prototype running at http://${host}:${port}`);
+  });
+}
+
+module.exports = requestHandler;

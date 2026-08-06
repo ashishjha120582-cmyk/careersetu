@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node --use-system-ca prototype/server.js",
     "dev": "node --use-system-ca prototype/server.js",
-    "check": "node --check prototype/server.js && node --check prototype/app.js",
+    "check": "node --check prototype/server.js && node --check prototype/app.js && node --check api/index.js",
     "embeddings": "node scripts/generate_job_embeddings.js"
   },
   "engines": {
