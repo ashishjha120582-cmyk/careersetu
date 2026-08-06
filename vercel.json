@@ -2,11 +2,7 @@
   "version": 2,
   "functions": {
     "api/index.js": {
-      "includeFiles": [
-        "data/**",
-        "prompts/**",
-        "prototype/**"
-      ]
+      "includeFiles": "{data/**,prompts/**,prototype/**}"
     }
   },
   "routes": [
