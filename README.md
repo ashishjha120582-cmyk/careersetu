@@ -10,6 +10,12 @@ I am from Rajasthan, 12th pass, I know typing and basic computer. What jobs can 
 
 CareerSetu understands the user's location, education, skills, and job intent. Then it shows relevant public and private opportunities, explains why a job can fit, and creates a practical skill guide for getting ready to apply.
 
+For a simple non-technical explanation of the whole system, read:
+
+```text
+CareerSetu/SIMPLE_ARCHITECTURE.md
+```
+
 ## Product Idea
 
 Most job platforms start with filters:
